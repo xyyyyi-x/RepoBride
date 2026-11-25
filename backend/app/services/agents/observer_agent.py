@@ -160,7 +160,7 @@ class ObserverAgent(BaseAgent):
                 WorkflowFinding(
                     finding_type="team_profile_missing",
                     severity="warning",
-                    message="当前还没有配置用于负责人路由的 RepoBride 团队成员。",
+                    message="当前还没有配置用于负责人路由的 DevFlow 团队成员。",
                     task_ids=[issue_result.task_id],
                     recommendation="请添加团队成员画像，让负责人推荐更可解释。",
                 )

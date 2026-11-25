@@ -45,10 +45,3 @@ devflow_demo.db
 Thumbs.db
 .idea/
 .vscode/
-
-# Personal learning materials and unrelated utilities
-/理解/
-/练习/
-/scripts/build_resume_templates.py
-/scripts/organize_course_images.py
-/docs/resume-templates/

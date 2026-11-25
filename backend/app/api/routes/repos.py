@@ -63,8 +63,6 @@ def _git_output(args: list[str], cwd: Path) -> str:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
-            encoding="utf-8",
-            errors="replace",
             timeout=30,
         )
     except FileNotFoundError as exc:
@@ -192,7 +190,7 @@ async def connect_repo(payload: RepoConnectRequest, background_tasks: Background
     fallback_message: str | None = None
     repo_data = {
         "id": None,
-        "description": "Demo repository for RepoBride",
+        "description": "Demo repository for DevFlow AI",
         "default_branch": remote_info.default_branch if remote_info and remote_info.default_branch else "main",
         "clone_url": remote_info.clone_url if remote_info else f"https://github.com/{owner}/{repo_name}.git",
     }

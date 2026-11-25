@@ -613,7 +613,7 @@ async def test_project_overview_without_llm_uses_workspace_evidence(monkeypatch)
         return {
             "route": "workspace_read_file",
             "tool_calls": [{"tool_name": "workspace.read_file", "arguments": input_data, "status": "success"}],
-            "answer": "README.md:1-2\n1: # RepoBride\n2: Core capability: repository analysis.",
+            "answer": "README.md:1-2\n1: # DevFlow AI\n2: Core capability: repository analysis.",
             "citations": [],
         }
 
@@ -734,7 +734,7 @@ def test_assignment_prompt_treats_empty_team_as_no_candidates() -> None:
     )
 
     assert "team_members: []" in prompt
-    assert "当前仓库还没有配置 RepoBride 团队成员" in prompt
+    assert "当前仓库还没有配置 DevFlow 团队成员" in prompt
     assert "不要把仓库内容" in prompt
 
 

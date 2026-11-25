@@ -144,8 +144,6 @@ def _run_git(args: list[str], cwd: Path | None = None) -> None:
         stdout=subprocess.DEVNULL,
         stderr=subprocess.PIPE,
         text=True,
-        encoding="utf-8",
-        errors="replace",
         timeout=180,
     )
 
@@ -159,8 +157,6 @@ def _is_git_work_tree(path: Path) -> bool:
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
         text=True,
-        encoding="utf-8",
-        errors="replace",
         timeout=30,
     )
     return result.returncode == 0 and result.stdout.strip().lower() == "true"
@@ -241,8 +237,6 @@ def _git_text(args: list[str], cwd: Path) -> str | None:
             stdout=subprocess.PIPE,
             stderr=subprocess.DEVNULL,
             text=True,
-            encoding="utf-8",
-            errors="replace",
             timeout=30,
         )
         return result.stdout.strip() or None

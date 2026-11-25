@@ -124,7 +124,7 @@ class SkillRegistry:
     def prompt_context(self) -> str:
         skills = self.list_skills()
         if not skills:
-            return "当前没有注册 RepoBride 技能。"
+            return "当前没有注册 DevFlow 技能。"
         return "\n".join(skill.prompt_summary() for skill in skills)
 
     def tool_description_suffix(self, tool_name: str) -> str:
